@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" data-mode="static">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sales platform · document comparison</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500&display=swap">
+<link rel="stylesheet" href="salesplatform.css">
+</head>
+<body>
+<header class="mast">
+  <div>
+    <p class="eyebrow">Sales enablement</p>
+    <h1>Document comparison</h1>
+    <p class="sub">Pick a document type, then a file. Gemini 3.8 Flash is the reference. Gemma 31B and Staging (advanced) are colored where they differ from it.</p>
+  </div>
+  <div class="tools">
+    <div>
+      <label for="type">Document type</label>
+      <select id="type"></select>
+    </div>
+    <div>
+      <label for="find">Find a file</label>
+      <input id="find" type="search" placeholder="Filename">
+    </div>
+    <label class="check"><input id="pinned" type="checkbox" checked> Pinned only</label>
+    <label class="check"><input id="diffs" type="checkbox"> Differences only</label>
+  </div>
+</header>
+<div class="layout">
+  <nav id="nav"></nav>
+  <section class="preview" id="preview"></section>
+  <section class="compare" id="compare"><p class="placeholder">Loading documents…</p></section>
+</div>
+<script src="salesplatform.js"></script>
+</body>
+</html>
